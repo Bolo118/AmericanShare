@@ -28,6 +28,8 @@ class CalculateViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         setDefault()
+        zeroButton.isSelected = true
+        selectedTip = "0%"
         inputTextField.text = nil
         
     }
@@ -35,6 +37,7 @@ class CalculateViewController: UIViewController {
     @IBAction func tipSelectedButtonTapped(_ sender: UIButton) {
     
         setDefault()
+        zeroButton.isSelected = false
         sender.isSelected = true
         
         let tipSplit = sender.tag
@@ -50,10 +53,20 @@ class CalculateViewController: UIViewController {
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         let totalBill = inputTextField.text!
-        let totalTip = Double(totalBill)! * tip
-        let totalEachPerson = (Double(totalBill)! + totalTip) / Double(people)
-        result = totalEachPerson
-        performSegue(withIdentifier: "toResult", sender: self)
+        if totalBill != "" {
+            let totalTip = Double(totalBill)! * tip
+            let totalEachPerson = (Double(totalBill)! + totalTip) / Double(people)
+            let totalEachPersonString = String(format: "%.2f", totalEachPerson)
+            result = Double(totalEachPersonString)!
+            performSegue(withIdentifier: "toResult", sender: self)
+        } else {
+            let alert = UIAlertController(title: "Invalid Input", message: "Please enter the amount of your bill", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,7 +84,6 @@ class CalculateViewController: UIViewController {
     }
     
     func setDefault() {
-        zeroButton.isSelected = false
         tenButton.isSelected = false
         twelveButton.isSelected = false
         fifthTeenButton.isSelected = false
