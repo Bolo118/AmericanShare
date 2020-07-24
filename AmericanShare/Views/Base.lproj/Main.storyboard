@@ -35,7 +35,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSU-PC-Ebf">
                                                 <rect key="frame" x="40" y="70" width="334" height="51.5"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="40"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -51,14 +51,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-Mg-TXA">
                                         <rect key="frame" x="0.0" y="161.5" width="414" height="161.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iYG-IN-Ep7">
-                                                <rect key="frame" x="20" y="5" width="374" height="156.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iYG-IN-Ep7">
+                                                <rect key="frame" x="40" y="5" width="334" height="156.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RN-0h-fbc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="39"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Tip:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJT-zh-4ya">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="45.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Tip Percentage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJT-zh-4ya">
+                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="39"/>
                                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -72,48 +72,74 @@
                                                             <constraint firstItem="UJT-zh-4ya" firstAttribute="leading" secondItem="1RN-0h-fbc" secondAttribute="leading" id="qkF-9R-M7y"/>
                                                         </constraints>
                                                     </view>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mHI-Qe-yEL">
-                                                        <rect key="frame" x="0.0" y="55.5" width="374" height="45.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mHI-Qe-yEL">
+                                                        <rect key="frame" x="0.0" y="59" width="334" height="39"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uea-iQ-MuT">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="45.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="39"/>
                                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
                                                                 <state key="normal" title="0%">
                                                                     <color key="titleColor" name="red"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="tipSelectedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pR6-5F-feF"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPk-cP-e87">
-                                                                <rect key="frame" x="187" y="0.0" width="187" height="45.5"/>
+                                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPk-cP-e87">
+                                                                <rect key="frame" x="114.5" y="0.0" width="105" height="39"/>
                                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
                                                                 <state key="normal" title="10%">
                                                                     <color key="titleColor" name="red"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="tipSelectedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ByA-ch-4Bv"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGV-hX-4St">
+                                                                <rect key="frame" x="229.5" y="0.0" width="104.5" height="39"/>
+                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                                                <state key="normal" title="12%">
+                                                                    <color key="titleColor" name="red"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="tipSelectedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qd8-8s-YMq"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-TJ-XU4">
-                                                        <rect key="frame" x="0.0" y="111" width="374" height="45.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-TJ-XU4">
+                                                        <rect key="frame" x="0.0" y="118" width="334" height="38.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5j-jV-1Dw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="45.5"/>
+                                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5j-jV-1Dw">
+                                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="38.5"/>
                                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
                                                                 <state key="normal" title="15%">
                                                                     <color key="titleColor" name="red"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="tipSelectedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCR-Co-sPN"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-aE-lsB">
-                                                                <rect key="frame" x="124.5" y="0.0" width="125" height="45.5"/>
+                                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-aE-lsB">
+                                                                <rect key="frame" x="114.5" y="0.0" width="105" height="38.5"/>
                                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
                                                                 <state key="normal" title="18%">
                                                                     <color key="titleColor" name="red"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="tipSelectedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLD-4l-Xfm"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG3-uq-kTJ">
-                                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="45.5"/>
+                                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG3-uq-kTJ">
+                                                                <rect key="frame" x="229.5" y="0.0" width="104.5" height="38.5"/>
                                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                                                <color key="tintColor" name="red"/>
                                                                 <state key="normal" title="20%">
                                                                     <color key="titleColor" name="red"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="tipSelectedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V6w-Qp-wTd"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -124,31 +150,31 @@
                                         <color key="backgroundColor" name="pink"/>
                                         <constraints>
                                             <constraint firstItem="iYG-IN-Ep7" firstAttribute="top" secondItem="CvU-Mg-TXA" secondAttribute="top" constant="5" id="aHf-cU-x6A"/>
-                                            <constraint firstItem="iYG-IN-Ep7" firstAttribute="leading" secondItem="CvU-Mg-TXA" secondAttribute="leading" constant="20" id="kqp-hY-CHG"/>
+                                            <constraint firstItem="iYG-IN-Ep7" firstAttribute="leading" secondItem="CvU-Mg-TXA" secondAttribute="leading" constant="40" id="kqp-hY-CHG"/>
                                             <constraint firstAttribute="bottom" secondItem="iYG-IN-Ep7" secondAttribute="bottom" id="rY3-dw-kZc"/>
-                                            <constraint firstAttribute="trailing" secondItem="iYG-IN-Ep7" secondAttribute="trailing" constant="20" id="yDc-Va-TvJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="iYG-IN-Ep7" secondAttribute="trailing" constant="40" id="yDc-Va-TvJ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rn-zW-Ghb">
                                         <rect key="frame" x="0.0" y="323" width="414" height="162"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="snS-hG-YRg">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="162"/>
+                                                <rect key="frame" x="40" y="0.0" width="334" height="162"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Split" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyW-8b-6wj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many people?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyW-8b-6wj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="81"/>
                                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l5n-2c-4bH">
-                                                        <rect key="frame" x="0.0" y="81" width="374" height="81"/>
+                                                        <rect key="frame" x="0.0" y="81" width="334" height="81"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggj-mh-s6u">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="81"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="157" height="81"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRM-np-f4B">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="157" height="81"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="137" height="81"/>
                                                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -163,10 +189,13 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrE-35-sSm">
-                                                                <rect key="frame" x="197" y="0.0" width="177" height="81"/>
+                                                                <rect key="frame" x="177" y="0.0" width="157" height="81"/>
                                                                 <subviews>
                                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="xDv-Xk-Nfi">
-                                                                        <rect key="frame" x="0.0" y="25" width="177" height="56"/>
+                                                                        <rect key="frame" x="0.0" y="25" width="157" height="56"/>
+                                                                        <connections>
+                                                                            <action selector="stepperValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="iMd-B5-cAi"/>
+                                                                        </connections>
                                                                     </stepper>
                                                                 </subviews>
                                                                 <color key="backgroundColor" name="pink"/>
@@ -184,9 +213,9 @@
                                         </subviews>
                                         <color key="backgroundColor" name="pink"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="snS-hG-YRg" secondAttribute="trailing" constant="20" id="0Hh-1L-flO"/>
+                                            <constraint firstAttribute="trailing" secondItem="snS-hG-YRg" secondAttribute="trailing" constant="40" id="0Hh-1L-flO"/>
                                             <constraint firstAttribute="bottom" secondItem="snS-hG-YRg" secondAttribute="bottom" id="Bwv-fd-Nyd"/>
-                                            <constraint firstItem="snS-hG-YRg" firstAttribute="leading" secondItem="5rn-zW-Ghb" secondAttribute="leading" constant="20" id="i9F-Zi-8P7"/>
+                                            <constraint firstItem="snS-hG-YRg" firstAttribute="leading" secondItem="5rn-zW-Ghb" secondAttribute="leading" constant="40" id="i9F-Zi-8P7"/>
                                             <constraint firstItem="snS-hG-YRg" firstAttribute="top" secondItem="5rn-zW-Ghb" secondAttribute="top" id="mtP-nt-ahH"/>
                                         </constraints>
                                     </view>
@@ -204,6 +233,9 @@
                                                 <state key="normal" title="Calculate">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jkZ-zi-KeC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="pink"/>
@@ -227,6 +259,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="American Share" id="zJ0-1u-SWH"/>
                     <connections>
+                        <outlet property="eightTeenButton" destination="rQF-aE-lsB" id="jAv-U7-in2"/>
+                        <outlet property="fifthTeenButton" destination="u5j-jV-1Dw" id="Xaf-H7-uFF"/>
+                        <outlet property="inputTextField" destination="cSU-PC-Ebf" id="UQS-B3-wBO"/>
+                        <outlet property="showPersonLabel" destination="NRM-np-f4B" id="Dgt-u6-cUU"/>
+                        <outlet property="tenButton" destination="fPk-cP-e87" id="mus-sU-g6n"/>
+                        <outlet property="twelveButton" destination="hGV-hX-4St" id="XdN-Mo-IuL"/>
+                        <outlet property="twentyButton" destination="ZG3-uq-kTJ" id="mji-en-FPX"/>
+                        <outlet property="zeroButton" destination="uea-iQ-MuT" id="4Eg-89-Le1"/>
                         <segue destination="rg7-yV-ffy" kind="presentation" identifier="toResult" modalPresentationStyle="fullScreen" id="h3j-uv-KrT"/>
                     </connections>
                 </viewController>
@@ -254,7 +294,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37.70" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6p-oK-tXW">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6p-oK-tXW">
                                                 <rect key="frame" x="100" y="181" width="214" height="52.5"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="40"/>
                                                 <color key="textColor" name="red"/>
@@ -297,6 +337,9 @@
                                                 <state key="normal" title="Recalculate">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="reCalculateButtonTapped:" destination="rg7-yV-ffy" eventType="touchUpInside" id="vOo-mB-ljv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -318,6 +361,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YRJ-BN-1xe"/>
                     </view>
+                    <connections>
+                        <outlet property="detailLabel" destination="HhE-IZ-QIu" id="tAt-86-uer"/>
+                        <outlet property="resultLabel" destination="k6p-oK-tXW" id="ibL-cK-YlX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VgV-PP-8BS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -342,6 +389,7 @@
             <point key="canvasLocation" x="140.57971014492756" y="116.51785714285714"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="red"/>
     <resources>
         <namedColor name="pink">
             <color red="1" green="0.51764705882352946" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

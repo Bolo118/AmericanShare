@@ -62,6 +62,7 @@
 				EC21776424CA2C9C00992C82 /* SceneDelegate.swift */,
 				EC21776B24CA2CA400992C82 /* Assets.xcassets */,
 				EC21777024CA2CA400992C82 /* Info.plist */,
+				EC21777C24CA84E600992C82 /* Model */,
 				EC21777924CA2ECB00992C82 /* Views */,
 				EC21777824CA2EB500992C82 /* Controllers */,
 			);
@@ -84,6 +85,13 @@
 				EC21776D24CA2CA400992C82 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EC21777C24CA84E600992C82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
