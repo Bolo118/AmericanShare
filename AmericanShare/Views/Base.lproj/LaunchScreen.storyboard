@@ -26,11 +26,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="American Share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT3-Hq-HFy">
                                 <rect key="frame" x="49" y="542" width="316" height="53"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Font"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="pink"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AT3-Hq-HFy" secondAttribute="trailing" constant="49" id="3hJ-Ws-4U2"/>
                             <constraint firstItem="AT3-Hq-HFy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="KMo-fG-BtP"/>
@@ -48,7 +48,10 @@
     </scenes>
     <resources>
         <image name="money" width="512" height="512"/>
-        <namedColor name="pink">
+        <namedColor name="Font">
+            <color red="0.90980392156862744" green="0.29019607843137257" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background">
             <color red="1" green="0.51764705882352946" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
