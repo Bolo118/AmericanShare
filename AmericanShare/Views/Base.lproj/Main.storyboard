@@ -33,7 +33,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSU-PC-Ebf">
-                                                <rect key="frame" x="40" y="70" width="240" height="54"/>
+                                                <rect key="frame" x="40" y="55" width="240" height="54"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="40"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                             </textField>
@@ -42,23 +42,28 @@
                                         <constraints>
                                             <constraint firstItem="WsZ-Nf-gns" firstAttribute="top" secondItem="aKE-Fg-qaj" secondAttribute="top" constant="10" id="2bu-zt-7gq"/>
                                             <constraint firstItem="cSU-PC-Ebf" firstAttribute="leading" secondItem="aKE-Fg-qaj" secondAttribute="leading" constant="40" id="4Bo-DG-dfa"/>
-                                            <constraint firstItem="cSU-PC-Ebf" firstAttribute="top" secondItem="WsZ-Nf-gns" secondAttribute="bottom" constant="20" id="6CY-hV-y3o"/>
+                                            <constraint firstItem="cSU-PC-Ebf" firstAttribute="top" secondItem="WsZ-Nf-gns" secondAttribute="bottom" constant="5" id="6CY-hV-y3o"/>
                                             <constraint firstItem="WsZ-Nf-gns" firstAttribute="leading" secondItem="aKE-Fg-qaj" secondAttribute="leading" constant="20" id="E2K-MA-Lxp"/>
                                             <constraint firstAttribute="bottom" secondItem="cSU-PC-Ebf" secondAttribute="bottom" constant="40" id="RjA-8v-IXT"/>
                                             <constraint firstAttribute="trailing" secondItem="cSU-PC-Ebf" secondAttribute="trailing" constant="40" id="Zu5-I2-2ok"/>
                                         </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="RjA-8v-IXT"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-Mg-TXA">
                                         <rect key="frame" x="0.0" y="109" width="320" height="109"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iYG-IN-Ep7">
-                                                <rect key="frame" x="40" y="5" width="240" height="104"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iYG-IN-Ep7">
+                                                <rect key="frame" x="20" y="5" width="280" height="104"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RN-0h-fbc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="21.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="34.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Tip Percentage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJT-zh-4ya">
-                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="21.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="34.5"/>
                                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -73,11 +78,11 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mHI-Qe-yEL">
-                                                        <rect key="frame" x="0.0" y="41.5" width="240" height="21"/>
+                                                        <rect key="frame" x="0.0" y="34.5" width="280" height="35"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uea-iQ-MuT">
-                                                                <rect key="frame" x="0.0" y="0.0" width="73.5" height="21"/>
-                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="35"/>
+                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
                                                                 <state key="normal" title="0%">
                                                                     <color key="titleColor" name="red"/>
                                                                 </state>
@@ -86,8 +91,8 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPk-cP-e87">
-                                                                <rect key="frame" x="83.5" y="0.0" width="73" height="21"/>
-                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                                                <rect key="frame" x="96.5" y="0.0" width="87" height="35"/>
+                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
                                                                 <state key="normal" title="10%">
                                                                     <color key="titleColor" name="red"/>
                                                                 </state>
@@ -96,8 +101,8 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGV-hX-4St">
-                                                                <rect key="frame" x="166.5" y="0.0" width="73.5" height="21"/>
-                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                                                <rect key="frame" x="193.5" y="0.0" width="86.5" height="35"/>
+                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
                                                                 <state key="normal" title="12%">
                                                                     <color key="titleColor" name="red"/>
                                                                 </state>
@@ -108,11 +113,11 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-TJ-XU4">
-                                                        <rect key="frame" x="0.0" y="82.5" width="240" height="21.5"/>
+                                                        <rect key="frame" x="0.0" y="69.5" width="280" height="34.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5j-jV-1Dw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="73.5" height="21.5"/>
-                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="34.5"/>
+                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
                                                                 <state key="normal" title="15%">
                                                                     <color key="titleColor" name="red"/>
                                                                 </state>
@@ -121,8 +126,8 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-aE-lsB">
-                                                                <rect key="frame" x="83.5" y="0.0" width="73" height="21.5"/>
-                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                                                <rect key="frame" x="96.5" y="0.0" width="87" height="34.5"/>
+                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
                                                                 <state key="normal" title="18%">
                                                                     <color key="titleColor" name="red"/>
                                                                 </state>
@@ -131,8 +136,8 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG3-uq-kTJ">
-                                                                <rect key="frame" x="166.5" y="0.0" width="73.5" height="21.5"/>
-                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                                                <rect key="frame" x="193.5" y="0.0" width="86.5" height="34.5"/>
+                                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
                                                                 <color key="tintColor" name="red"/>
                                                                 <state key="normal" title="20%">
                                                                     <color key="titleColor" name="red"/>
@@ -150,9 +155,13 @@
                                         <color key="backgroundColor" name="pink"/>
                                         <constraints>
                                             <constraint firstItem="iYG-IN-Ep7" firstAttribute="top" secondItem="CvU-Mg-TXA" secondAttribute="top" constant="5" id="aHf-cU-x6A"/>
-                                            <constraint firstItem="iYG-IN-Ep7" firstAttribute="leading" secondItem="CvU-Mg-TXA" secondAttribute="leading" constant="40" id="kqp-hY-CHG"/>
+                                            <constraint firstItem="iYG-IN-Ep7" firstAttribute="leading" secondItem="CvU-Mg-TXA" secondAttribute="leading" constant="40" id="kqp-hY-CHG">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                            </constraint>
                                             <constraint firstAttribute="bottom" secondItem="iYG-IN-Ep7" secondAttribute="bottom" id="rY3-dw-kZc"/>
-                                            <constraint firstAttribute="trailing" secondItem="iYG-IN-Ep7" secondAttribute="trailing" constant="40" id="yDc-Va-TvJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="iYG-IN-Ep7" secondAttribute="trailing" constant="40" id="yDc-Va-TvJ">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                            </constraint>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rn-zW-Ghb">
@@ -223,7 +232,7 @@
                                         <rect key="frame" x="0.0" y="327" width="320" height="109"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f2-iC-Kdj">
-                                                <rect key="frame" x="80" y="11" width="160" height="58"/>
+                                                <rect key="frame" x="60" y="31" width="200" height="58"/>
                                                 <color key="backgroundColor" name="red"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
                                                 <state key="normal" title="Calculate">
@@ -236,9 +245,15 @@
                                         </subviews>
                                         <color key="backgroundColor" name="pink"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="7f2-iC-Kdj" secondAttribute="bottom" constant="40" id="ZJl-jd-TtR"/>
-                                            <constraint firstAttribute="trailing" secondItem="7f2-iC-Kdj" secondAttribute="trailing" constant="80" id="iQA-y2-wzK"/>
-                                            <constraint firstItem="7f2-iC-Kdj" firstAttribute="leading" secondItem="muB-zM-UJr" secondAttribute="leading" constant="80" id="pDg-y4-J8F"/>
+                                            <constraint firstAttribute="bottom" secondItem="7f2-iC-Kdj" secondAttribute="bottom" constant="40" id="ZJl-jd-TtR">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="7f2-iC-Kdj" secondAttribute="trailing" constant="80" id="iQA-y2-wzK">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                            </constraint>
+                                            <constraint firstItem="7f2-iC-Kdj" firstAttribute="leading" secondItem="muB-zM-UJr" secondAttribute="leading" constant="80" id="pDg-y4-J8F">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                            </constraint>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -248,7 +263,7 @@
                         <constraints>
                             <constraint firstItem="9Uc-v2-Odg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HOL-m9-yhk"/>
                             <constraint firstItem="9Uc-v2-Odg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LfN-gI-swg"/>
-                            <constraint firstAttribute="bottom" secondItem="9Uc-v2-Odg" secondAttribute="bottom" id="YBE-Mm-GT5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Uc-v2-Odg" secondAttribute="bottom" id="YBE-Mm-GT5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Uc-v2-Odg" secondAttribute="trailing" id="gVe-dL-5HB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -291,7 +306,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6p-oK-tXW">
-                                                <rect key="frame" x="100" y="124.5" width="120" height="52.5"/>
+                                                <rect key="frame" x="100" y="99.5" width="120" height="52.5"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="40"/>
                                                 <color key="textColor" name="red"/>
                                                 <nil key="highlightedColor"/>
@@ -300,7 +315,9 @@
                                         <color key="backgroundColor" name="pink"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="k6p-oK-tXW" secondAttribute="trailing" constant="100" id="38U-6D-d5T"/>
-                                            <constraint firstItem="k6p-oK-tXW" firstAttribute="top" secondItem="ZbF-Qo-AwE" secondAttribute="bottom" constant="30" id="HgO-o6-dbO"/>
+                                            <constraint firstItem="k6p-oK-tXW" firstAttribute="top" secondItem="ZbF-Qo-AwE" secondAttribute="bottom" constant="30" id="HgO-o6-dbO">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                                            </constraint>
                                             <constraint firstItem="ZbF-Qo-AwE" firstAttribute="centerX" secondItem="bTe-LR-ZDx" secondAttribute="centerX" id="RLe-bd-3SV"/>
                                             <constraint firstItem="k6p-oK-tXW" firstAttribute="leading" secondItem="bTe-LR-ZDx" secondAttribute="leading" constant="100" id="d3v-L6-ryn"/>
                                             <constraint firstItem="ZbF-Qo-AwE" firstAttribute="centerY" secondItem="bTe-LR-ZDx" secondAttribute="centerY" id="wDV-rI-Rr1"/>
@@ -327,9 +344,9 @@
                                         <rect key="frame" x="0.0" y="320" width="320" height="160"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVV-QE-Rvl">
-                                                <rect key="frame" x="80" y="92" width="160" height="58"/>
+                                                <rect key="frame" x="60" y="91" width="200" height="49"/>
                                                 <color key="backgroundColor" name="red"/>
-                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="28"/>
                                                 <state key="normal" title="Recalculate">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -340,9 +357,15 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="mVV-QE-Rvl" firstAttribute="leading" secondItem="AVP-Sj-BRa" secondAttribute="leading" constant="80" id="Kud-p4-iO6"/>
-                                            <constraint firstAttribute="trailing" secondItem="mVV-QE-Rvl" secondAttribute="trailing" constant="80" id="mG5-OK-DgC"/>
-                                            <constraint firstAttribute="bottom" secondItem="mVV-QE-Rvl" secondAttribute="bottom" constant="10" id="ycB-i7-D00"/>
+                                            <constraint firstItem="mVV-QE-Rvl" firstAttribute="leading" secondItem="AVP-Sj-BRa" secondAttribute="leading" constant="80" id="Kud-p4-iO6">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="mVV-QE-Rvl" secondAttribute="trailing" constant="80" id="mG5-OK-DgC">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                            </constraint>
+                                            <constraint firstAttribute="bottom" secondItem="mVV-QE-Rvl" secondAttribute="bottom" constant="10" id="ycB-i7-D00">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                            </constraint>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -372,7 +395,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZkG-2C-EEJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hae-uw-lji">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
